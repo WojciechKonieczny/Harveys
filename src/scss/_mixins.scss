@@ -1,0 +1,17 @@
+@mixin reset-padding-margin()
+{
+   padding: 0;
+   margin: 0;
+}
+
+@mixin reset-ul()
+{
+   list-style-type: none;
+}
+
+@mixin border-radius($radius)
+{
+   -webkit-border-radius: $radius;
+   -moz-border-radius: $radius;
+   border-radius: $radius;
+}

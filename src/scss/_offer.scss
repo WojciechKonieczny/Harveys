@@ -1,0 +1,38 @@
+.offer-content
+{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+}
+
+.one-item
+{
+   text-align: center; 
+   margin-bottom: 2em;
+}
+
+.icon-item
+{
+   font-size: 5.5em;
+   color: $yellow;
+   height: 2em;
+}
+
+.title-item
+{
+   font-size: 1.6em;
+   font-weight: bold;
+   padding: 1em 0;
+}
+
+.description-item
+{
+   font-size: 1.7em;
+}
+
+@media (max-width: $middle-screen)
+{
+   .offer-content
+   {
+      grid-template-columns: 1fr;
+   }
+}

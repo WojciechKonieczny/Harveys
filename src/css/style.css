@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Open Sans", "Nunito", sans-serif;
+  background-color: #f6f6f6;
+  color: #808185;
+  line-height: 1.61; }
+
+h1 {
+  font-size: 1.9em;
+  color: #808185; }
+
+.container {
+  width: 85%;
+  margin: 0 auto; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+  a:link, a:visited {
+    color: #fff; }
+
+.btn {
+  cursor: pointer;
+  font-size: 1.4em;
+  background: linear-gradient(to left bottom, #ffb60d, #ffa91a, #ff9c25, #ff8f2e, #ff8237);
+  border: none;
+  padding: 2em;
+  -webkit-border-radius: 2.8em;
+  -moz-border-radius: 2.8em;
+  border-radius: 2.8em; }
+  .btn:hover {
+    background-image: linear-gradient(to left bottom, #ffa91a, #ffb60d, #ff9c25, #ff8f2e, #ff8237); }
+
+section {
+  margin-top: 6em; }
+
+.title-section {
+  padding: 0;
+  margin: 0;
+  font-family: "Fira Sans";
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FF8237; }
+
+.description-section {
+  font-family: "Fira Sans";
+  text-align: center;
+  font-size: 1.35em;
+  text-transform: uppercase;
+  margin-bottom: 4em; }
+
+.top-header {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  background: url("../img/bg-header.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
+
+nav {
+  padding-top: 1.5em;
+  max-height: 5em;
+  width: 100%; }
+
+.my-little-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center; }
+
+.logo {
+  display: flex;
+  justify-content: center; }
+  .logo > img {
+    max-width: 8em;
+    max-height: 8em; }
+    .logo > img:hover {
+      transform: rotate(180deg);
+      transition-delay: .2s; }
+
+.menu ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Fira Sans";
+  font-size: 1.3em; }
+  .menu ul li {
+    padding: 1em; }
+    .menu ul li a {
+      display: block;
+      text-transform: uppercase; }
+    .menu ul li:hover {
+      background: linear-gradient(to left bottom, #ffb60d, #ffa91a, #ff9c25, #ff8f2e, #ff8237);
+      -webkit-border-radius: 2.8em;
+      -moz-border-radius: 2.8em;
+      border-radius: 2.8em; }
+
+.hamburger {
+  display: none;
+  color: #fff; }
+
+.close::before {
+  content: '\f00d';
+  font-size: 1.3em; }
+
+.close::after {
+  content: ''; }
+
+.content-advert {
+  width: 100%;
+  text-align: center; }
+  .content-advert h1 {
+    font-size: 5.5em;
+    font-family: 'Pacifico';
+    color: #FFB60D; }
+
+.in-city {
+  text-shadow: 0.2em 0.2em 1.9em rgba(150, 150, 150, 0.1);
+  color: #FF8237; }
+
+#top-advert {
+  text-align: center; }
+
+.name {
+  color: #FF8237; }
+
+@media (max-width: 768px) {
+  .hamburger {
+    cursor: pointer;
+    position: relative;
+    flex: 1;
+    display: block;
+    text-align: right; }
+  .menu ul {
+    display: none;
+    flex: 0; }
+  .menu.to-responsive {
+    display: flex;
+    flex-direction: row; }
+    .menu.to-responsive ul {
+      display: block;
+      position: absolute;
+      top: 5em;
+      right: 2em;
+      background-color: #fff;
+      z-index: 999; }
+      .menu.to-responsive ul li {
+        padding: 1em 2em;
+        text-align: center;
+        color: #808185; }
+        .menu.to-responsive ul li:hover {
+          border: none;
+          border-radius: 0;
+          background-color: #FFB60D; }
+        .menu.to-responsive ul li a {
+          color: #808185; } }
+
+.offer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+
+.one-item {
+  text-align: center;
+  margin-bottom: 2em; }
+
+.icon-item {
+  font-size: 5.5em;
+  color: #FFB60D;
+  height: 2em; }
+
+.title-item {
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 1em 0; }
+
+.description-item {
+  font-size: 1.7em; }
+
+@media (max-width: 768px) {
+  .offer-content {
+    grid-template-columns: 1fr; } }
+
+.photo {
+  width: 100%;
+  height: 50vh;
+  background: url("../img/photo1.jpg") no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.text {
+  padding-left: 2em;
+  font-size: 1.5em;
+  text-align: justify; }
+
+.image-and-text {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  overflow: hidden; }
+
+@media (max-width: 768px) {
+  .image-and-text {
+    grid-template-columns: 1fr; }
+  .text {
+    padding-top: 1.5em;
+    padding-left: 0; } }
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr; }

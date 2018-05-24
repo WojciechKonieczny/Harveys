@@ -1,0 +1,178 @@
+.top-header
+{
+   display: grid;
+   height: 100vh;
+   width: 100%;
+   background: url('../img/bg-header.jpg') no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+}
+
+nav
+{
+   padding-top: 1.5em;
+   max-height: 5em;
+   width: 100%;
+}
+
+.my-little-grid
+{
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   align-items: center;
+}
+
+.logo 
+{
+   display: flex;
+   justify-content: center;
+
+
+   &>img
+   {
+      max-width: 8em;
+      max-height: 8em;
+
+      &:hover
+      {
+         transform: rotate(180deg);
+         transition-delay: .2s;
+      }
+   } 
+}
+
+.menu
+{
+   ul
+   {
+      @include reset-ul();
+      display: flex;
+      justify-content: flex-end;
+      font-family: "Fira Sans";
+      font-size: 1.3em;
+
+      li
+      {
+         padding: 1em;
+
+         a
+         {
+            display: block;
+            text-transform: uppercase;
+         }
+         
+         &:hover
+         {
+            background: linear-gradient(to left bottom, #ffb60d, #ffa91a, #ff9c25, #ff8f2e, #ff8237);
+            @include border-radius(2.8em);
+         }
+      }
+   }
+}
+
+.hamburger
+{
+   display: none;
+   color: $white;
+}
+
+.close
+{
+   &::before
+   {
+      content: '\f00d';
+      font-size: 1.3em;
+   }
+
+   &::after
+   {
+      content: '';
+   }
+
+}
+
+.content-advert
+{
+   width: 100%;
+   text-align: center;
+
+   h1
+   {
+      font-size: 5.5em;
+      font-family: 'Pacifico';
+      color: $yellow;
+   }
+
+}
+
+.in-city
+{
+   text-shadow: 0.2em 0.2em 1.9em rgba(150, 150, 150, .1);
+   color: $orange;
+}
+
+#top-advert
+{
+   text-align: center;
+}
+
+.name
+{
+   color: $orange;
+}
+
+@media (max-width: $middle-screen)
+{
+   .hamburger
+   {
+      cursor: pointer;
+      position: relative;
+      flex: 1;
+      display: block;
+      text-align: right;
+   }
+
+   .menu
+   {
+      ul
+      {
+         display: none;
+         flex: 0;
+      }
+   }
+
+   .menu.to-responsive
+   {
+      display: flex;
+      flex-direction: row;
+      ul
+      {
+         display: block;
+         position: absolute;
+         top: 5em;
+         right: 2em;
+         background-color: #fff;
+         z-index: 999;
+
+         li
+         {
+            padding: 1em 2em;
+            text-align: center;
+            color: $gray;
+
+            &:hover
+            {
+               border: none;
+               border-radius: 0;
+               background-color: #FFB60D;
+            }
+
+            a
+            {
+               color: $gray;
+            }
+         }
+      }
+   }
+}
