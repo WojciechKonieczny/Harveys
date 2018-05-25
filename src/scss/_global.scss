@@ -45,18 +45,18 @@ a
 {
    cursor: pointer;
    font-size: 1.4em;
-   background: linear-gradient(to left bottom, #ffb60d, #ffa91a, #ff9c25, #ff8f2e, #ff8237);
    border: none;
    padding: 2em;
    @include border-radius(2.8em);
+   @include orange-gradient();
 
    &:hover
    {
-      background-image: linear-gradient(to left bottom, #ffa91a, #ffb60d, #ff9c25, #ff8f2e, #ff8237);
+      @include orange-gradient();
    }
 }
 
-section
+section, footer
 {
    margin-top: 6em;
 }
@@ -78,4 +78,26 @@ section
    font-size: 1.35em;
    text-transform: uppercase;
    margin-bottom: 4em;
+}
+
+
+@media (max-width: $middle-screen)
+{
+   html
+   {
+      font-size: 59%;
+   }
+
+   .container
+   {
+      width: 90%;
+   }
+}
+
+@media (max-width: $small-screen)
+{
+   html
+   {
+      font-size: 55%;
+   }
 }

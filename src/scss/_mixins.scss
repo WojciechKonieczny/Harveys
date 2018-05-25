@@ -15,3 +15,8 @@
    -moz-border-radius: $radius;
    border-radius: $radius;
 }
+
+@mixin orange-gradient()
+{
+   background: linear-gradient(to left bottom, #ffb60d, #ffa91a, #ff9c25, #ff8f2e, #ff8237);
+}

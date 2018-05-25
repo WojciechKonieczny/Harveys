@@ -176,3 +176,14 @@ nav
       }
    }
 }
+
+@media (max-width: $xsmall-screen)
+{
+   .content-advert
+   {
+      h1 
+      {
+         font-size: 3em;
+      }
+   }
+}

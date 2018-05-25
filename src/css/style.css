@@ -31,16 +31,16 @@ a {
 .btn {
   cursor: pointer;
   font-size: 1.4em;
-  background: linear-gradient(to left bottom, #ffb60d, #ffa91a, #ff9c25, #ff8f2e, #ff8237);
   border: none;
   padding: 2em;
   -webkit-border-radius: 2.8em;
   -moz-border-radius: 2.8em;
-  border-radius: 2.8em; }
+  border-radius: 2.8em;
+  background: linear-gradient(to left bottom, #ffb60d, #ffa91a, #ff9c25, #ff8f2e, #ff8237); }
   .btn:hover {
-    background-image: linear-gradient(to left bottom, #ffa91a, #ffb60d, #ff9c25, #ff8f2e, #ff8237); }
+    background: linear-gradient(to left bottom, #ffb60d, #ffa91a, #ff9c25, #ff8f2e, #ff8237); }
 
-section {
+section, footer {
   margin-top: 6em; }
 
 .title-section {
@@ -58,6 +58,16 @@ section {
   font-size: 1.35em;
   text-transform: uppercase;
   margin-bottom: 4em; }
+
+@media (max-width: 900px) {
+  html {
+    font-size: 59%; }
+  .container {
+    width: 90%; } }
+
+@media (max-width: 480px) {
+  html {
+    font-size: 55%; } }
 
 .top-header {
   display: grid;
@@ -134,7 +144,7 @@ nav {
 .name {
   color: #FF8237; }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .hamburger {
     cursor: pointer;
     position: relative;
@@ -165,6 +175,10 @@ nav {
         .menu.to-responsive ul li a {
           color: #808185; } }
 
+@media (max-width: 320px) {
+  .content-advert h1 {
+    font-size: 3em; } }
+
 .offer-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr); }
@@ -186,7 +200,7 @@ nav {
 .description-item {
   font-size: 1.7em; }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .offer-content {
     grid-template-columns: 1fr; } }
 
@@ -195,7 +209,10 @@ nav {
   height: 50vh;
   background: url("../img/photo1.jpg") no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em; }
 
 .text {
   padding-left: 2em;
@@ -207,7 +224,7 @@ nav {
   grid-template-columns: 1fr 2fr;
   overflow: hidden; }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .image-and-text {
     grid-template-columns: 1fr; }
   .text {
@@ -216,4 +233,12 @@ nav {
 
 .contact-content {
   display: grid;
-  grid-template-columns: 1fr 2fr; }
+  grid-template-columns: 1fr 2fr;
+  font-size: 1.4em; }
+  .contact-content .fa {
+    color: #FF8237; }
+
+@media (max-width: 900px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    text-align: center; } }
