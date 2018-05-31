@@ -163,7 +163,10 @@ nav {
       top: 5em;
       right: 2em;
       background-color: #fff;
-      z-index: 999; }
+      z-index: 999;
+      -webkit-border-radius: 0.5em;
+      -moz-border-radius: 0.5em;
+      border-radius: 0.5em; }
       .menu.to-responsive ul li {
         padding: 1em 2em;
         text-align: center;
@@ -172,6 +175,14 @@ nav {
           border: none;
           border-radius: 0;
           background-color: #FFB60D; }
+          .menu.to-responsive ul li:hover:first-child {
+            -webkit-border-radius: 0.5em 0.5em 0 0;
+            -moz-border-radius: 0.5em 0.5em 0 0;
+            border-radius: 0.5em 0.5em 0 0; }
+          .menu.to-responsive ul li:hover:last-child {
+            -webkit-border-radius: 0 0 0.5em 0.5em;
+            -moz-border-radius: 0 0 0.5em 0.5em;
+            border-radius: 0 0 0.5em 0.5em; }
         .menu.to-responsive ul li a {
           color: #808185; } }
 

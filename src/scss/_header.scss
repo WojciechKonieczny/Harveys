@@ -154,6 +154,7 @@ nav
          right: 2em;
          background-color: #fff;
          z-index: 999;
+         @include border-radius($basic-radius-size);
 
          li
          {
@@ -166,6 +167,16 @@ nav
                border: none;
                border-radius: 0;
                background-color: #FFB60D;
+
+               &:first-child
+               {
+                  @include advanced-border-radius($basic-radius-size, $basic-radius-size, 0, 0);
+               }
+
+               &:last-child
+               {
+                  @include advanced-border-radius(0, 0, $basic-radius-size, $basic-radius-size);
+               }
             }
 
             a
